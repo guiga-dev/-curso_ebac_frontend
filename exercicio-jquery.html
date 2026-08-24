@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas - jQuery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    /* 3. Classe para o efeito de texto riscado */
+    .concluidade {
+      text-decoration: line-through;
+      color: #888;
+    }
+
+    li {
+      cursor: pointer;
+      margin: 8px 0;
+      padding: 4px;
+      user-select: none;
+    }
+  </style>
+  <!-- Inclusão do jQuery via CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+  <h2>Minha Lista de Tarefas</h2>
+
+  <!-- 1. Formulário com campo de texto e botão -->
+  <form id="form-tarefa">
+    <input type="text" id="nome-tarefa" placeholder="Digite a tarefa..." required />
+    <button type="submit">Cadastrar</button>
+  </form>
+
+  <!-- 2. Lista não ordenada -->
+  <ul id="lista-tarefas"></ul>
+
+  <!-- 4. Lógica de manipulação com jQuery -->
+  <script>
+    $(document).ready(function() {
+      
+      // Captura o envio do formulário
+      $('#form-tarefa').on('submit', function(e) {
+        e.preventDefault(); // Impede o recarregamento da página
+
+        const textoTarefa = $('#nome-tarefa').val();
+
+        // 2. Adiciona o elemento <li> na lista
+        const novoItem = $(`<li>${textoTarefa}</li>`);
+        $('#lista-tarefas').append(novoItem);
+
+        // Limpa o campo de entrada
+        $('#nome-tarefa').val('');
+      });
+
+      // 3. Adiciona o efeito line-through ao clicar nos itens da lista
+      // Usamos delegação de eventos no 'ul' para que novos elementos <li> funcionem
+      $('#lista-tarefas').on('click', 'li', function() {
+        $(this).toggleClass('concluidade');
+      });
+
+    });
+  </script>
+
+</body>
+</html>
