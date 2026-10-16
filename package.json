@@ -1,0 +1,1 @@
+{"name":"ebac-cypress","version":"1.0.0","private":true,"scripts":{"test":"cypress run","test:open":"cypress open"},"devDependencies":{"cypress":"^15.0.0"}}
