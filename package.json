@@ -1,0 +1,7 @@
+{
+  "name": "ebac-exercicio-less",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": { "build": "lessc less/main.less styles.css" },
+  "devDependencies": { "less": "4.4.1" }
+}
