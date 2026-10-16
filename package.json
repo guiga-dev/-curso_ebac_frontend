@@ -1,0 +1,13 @@
+{
+  "name": "ebac-exercicio-grunt",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "grunt"
+  },
+  "devDependencies": {
+    "grunt": "1.6.3",
+    "grunt-contrib-less": "3.0.0",
+    "grunt-contrib-uglify": "5.2.2"
+  }
+}
