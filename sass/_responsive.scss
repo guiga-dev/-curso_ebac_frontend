@@ -1,0 +1,14 @@
+@use 'variables' as v;
+
+@media screen and (max-width: v.$tablet) {
+    .container { max-width: 80%; }
+    .products {
+        grid-template-columns: repeat(2, 48.5%);
+        column-gap: 3%;
+    }
+}
+
+@media screen and (max-width: v.$mobile) {
+    .products { display: block; }
+    .product-item { margin-bottom: 32px; }
+}

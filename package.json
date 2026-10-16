@@ -1,0 +1,10 @@
+{
+  "name": "ebac-exercicio-sass",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "sass --no-source-map --style=expanded sass/main.scss styles.css",
+    "watch": "sass --watch sass/main.scss:styles.css"
+  },
+  "devDependencies": { "sass": "1.93.2" }
+}
